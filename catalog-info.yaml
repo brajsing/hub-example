@@ -1,12 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ACME
-  description: A Company that Makes Everything
+  name: "Atest1"
+  description: "testing"
+  links:
+    - title: TIBCO Cloud Home
+      url: https://cloud.tibco.com/
+    - title: Documentation
+      url: https://eu.integration.cloud.tibco.com/docs/index.html
+    - title: TIBCO Cloud Integration
+      url: https://eu.integration.cloud.tibco.com/applications
+  annotations:
+    github.com/project-slug: TIBCO-Hub-Backstage/Atest1
+    backstage.io/techdocs-ref: dir:.
 spec:
-  type: organization
-  profile:
-    displayName: ACME Organization
-    email: info@acme.com
-    picture: https://static.wikia.nocookie.net/looneytunes/images/5/56/Comp_2.jpg
-  children: [ tenant-department, work-department ]
+  type: service
+  lifecycle: development
+  owner: "group:default/acme"
+  providesApis: [ "Atest1-api" ]
